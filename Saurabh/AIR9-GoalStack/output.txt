@@ -1,0 +1,144 @@
+
+initial state is :  ON(B,A)^ONTABLE(C)^ONTABLE(A)^ONTABLE(D)
+
+goal state is :  ON(C,A)^ON(B,D)^ONTABLE(A)^ONTABLE(D)
+
+ON(C,A)
+opd =  ['C,A', '']
+2
+ON(B,D)
+opd =  ['B,D', '']
+2
+-----------------------------------------
+true sub-goals are: 
+ONTABLE(A)
+ONTABLE(D)
+-----------------------------------------
+stack pointer! =  2
+current_state =  ON(B,A)^ONTABLE(C)^ONTABLE(A)^ONTABLE(D)
+***********************************
+goal information is:
+operation =  ON
+operand1 =  C
+operand2 =  A
+***********************************
+goal information is:
+operation =  STACK
+operand1 =  A
+operand2 =  C
+***********************************
+goal information is:
+operation =  CLEAR
+operand1 =  A
+operand2 =  
+in stacking at start op =  CLEAR and operand =  A
+entered clear and current state is = and to check is =  ON(B,A)^ONTABLE(C)^ONTABLE(A)^ONTABLE(D) A
+***********************************
+goal information is:
+operation =  UNSTACK
+operand1 =  A
+operand2 =  B
+***********************************
+goal information is:
+operation =  IFON
+operand1 =  A
+operand2 =  B
+unstack operation to checked
+string t remove =  ON(B,A)
+in unstacking second layer operation =  CLEAR
+entered clear and current state is = and to check is =  ON(B,A)^ONTABLE(C)^ONTABLE(A)^ONTABLE(D) B
+value from clear =  False
+HOLD@@@ =  B
+placed on table as it is expected
+unstacked bro and final current_state is =  ONTABLE(C)^ONTABLE(A)^ONTABLE(D)
+***********************************
+goal information is:
+operation =  CLEAR
+operand1 =  A
+operand2 =  
+in stacking at start op =  CLEAR and operand =  A
+entered clear and current state is = and to check is =  ONTABLE(C)^ONTABLE(A)^ONTABLE(D) A
+block is clear @  A
+HOLD %%%=  B
+HOLD mein koi DUSRA hai
+currently value of HOLD is =  B which is unwanted
+entered clear and current state is = and to check is =  ONTABLE(C)^ONTABLE(A)^ONTABLE(D) D
+newly found block =  D
+unacg op =  HOLD
+temp_obj ka op =  CLEAR
+***********************************
+goal information is:
+operation =  STACK
+operand1 =  D
+operand2 =  B
+***********************************
+goal information is:
+operation =  CLEAR
+operand1 =  D
+operand2 =  
+in stacking at start op =  CLEAR and operand =  D
+entered clear and current state is = and to check is =  ONTABLE(C)^ONTABLE(A)^ONTABLE(D) D
+block is clear @  D
+HOLD %%%=  B
+modified state by stacking is now =  ONTABLE(C)^ONTABLE(A)^ONTABLE(D)^ON(B,D)
+***********************************
+goal information is:
+operation =  CLEAR
+operand1 =  A
+operand2 =  
+in stacking at start op =  CLEAR and operand =  A
+entered clear and current state is = and to check is =  ONTABLE(C)^ONTABLE(A)^ONTABLE(D)^ON(B,D) A
+block is clear @  A
+HOLD %%%=  
+HOLD khaali hai
+junior =  C
+entered clear and current state is = and to check is =  ONTABLE(C)^ONTABLE(A)^ONTABLE(D)^ON(B,D) C
+junior achha hai yaar
+modified state by stacking is now =  ^ONTABLE(A)^ONTABLE(D)^ON(B,D)^ON(C,A)
+***********************************
+goal information is:
+operation =  ON
+operand1 =  B
+operand2 =  D
+***********************************
+goal information is:
+operation =  STACK
+operand1 =  D
+operand2 =  B
+***********************************
+goal information is:
+operation =  CLEAR
+operand1 =  D
+operand2 =  
+in stacking at start op =  CLEAR and operand =  D
+entered clear and current state is = and to check is =  ^ONTABLE(A)^ONTABLE(D)^ON(B,D)^ON(C,A) D
+***********************************
+goal information is:
+operation =  UNSTACK
+operand1 =  D
+operand2 =  B
+***********************************
+goal information is:
+operation =  IFON
+operand1 =  D
+operand2 =  B
+unstack operation to checked
+string t remove =  ON(B,D)
+in unstacking second layer operation =  CLEAR
+entered clear and current state is = and to check is =  ^ONTABLE(A)^ONTABLE(D)^ON(B,D)^ON(C,A) B
+value from clear =  False
+HOLD@@@ =  B
+placed on table as it is expected
+unstacked bro and final current_state is =  ONTABLE(A)^ONTABLE(D)^ON(C,A)
+***********************************
+goal information is:
+operation =  CLEAR
+operand1 =  D
+operand2 =  
+in stacking at start op =  CLEAR and operand =  D
+entered clear and current state is = and to check is =  ONTABLE(A)^ONTABLE(D)^ON(C,A) D
+block is clear @  D
+HOLD %%%=  B
+modified state by stacking is now =  ONTABLE(A)^ONTABLE(D)^ON(C,A)^ON(B,D)
+
+Process finished with exit code 0

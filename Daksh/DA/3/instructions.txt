@@ -1,0 +1,19 @@
+export HADOOP_CLASSPATH=$(hadoop classpath)
+
+mkdir Classes
+
+hadoop fs -mkdir /WordCountTutorial
+hadoop fs -mkdir /WordCountTutorial/Input
+hadoop fs -put '/home/dakshpokar/Hadoop/Inout_data/input.txt' /WordCountTutorial/Input
+
+javac -classpath ${HADOOP_CLASSPATH} -d '/home/dakshpokar/Hadoop/Classes' '/home/dakshpokar/Hadoop/count.java' 
+
+jar -cvf tutorial.jar -C Classes/ .
+
+hadoop jar '/home/dakshpokar/Hadoop/tutorial.jar' count /WordCountTutorial/Input /WordCountTutorial/Output
+
+hadoop dfs -cat /WordCountTutorial/Output/*
+
+
+To run again
+hadoop fs -rmr /WordCountTutorial/Output
